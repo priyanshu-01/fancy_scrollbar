@@ -1,11 +1,11 @@
 name: fancy_scrollbar
-description: "A customizable horizontal scrollbar widget for Flutter that provides smooth scrolling with an animated indicator, perfect for navigation menus and tab bars."
-version: 0.0.1
-homepage: https://github.com/yourusername/fancy_scrollbar
-repository: https://github.com/yourusername/fancy_scrollbar
+description: "A customizable horizontal scrollbar widget for Flutter that provides smooth scrolling with an animated auto snapping indicator, perfect for navigation menus and tab bars."
+version: 1.0.0
+homepage: https://github.com/priyanshu-01/fancy_scrollbar
+repository: https://github.com/priyanshu-01/fancy_scrollbar
 
 environment:
-  sdk: ">=3.4.4 <4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
