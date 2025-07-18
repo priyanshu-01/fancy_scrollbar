@@ -35,7 +35,7 @@ FancyScrollBar(
       selectedIndex = index;
     });
   },
-  selectedIndex: selectedIndex,
+  // initialSelectedIndex defaults to 0 if not specified
   indicatorColor: Colors.blue, // Optional: customize indicator color
   items: [
     Text('Item 1'),
@@ -49,8 +49,8 @@ FancyScrollBar(
 
 - `itemSpacing`: The horizontal spacing between items in the scrollbar
 - `onSelectionChanged`: Callback function that is called when the selected index changes
-- `selectedIndex`: The currently selected item index
 - `items`: List of widget items to display in the scrollbar
+- `initialSelectedIndex`: Optional initial selected item index (defaults to 0)
 - `viewportHeight`: Optional height of the scrollable view (defaults to 60.0)
 - `indicatorHeight`: Optional height of the indicator bar (defaults to 2.0)
 - `indicatorColor`: Optional color of the indicator bar (defaults to Colors.black)
@@ -68,7 +68,7 @@ FancyScrollBar(
       selectedIndex = index;
     });
   },
-  selectedIndex: selectedIndex,
+  initialSelectedIndex: 2, // Start with the third item selected
   viewportHeight: 80,
   indicatorColor: Theme.of(context).primaryColor, // Use theme color
   items: [

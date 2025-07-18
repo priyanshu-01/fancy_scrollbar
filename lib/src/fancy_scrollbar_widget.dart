@@ -38,7 +38,9 @@ class FancyScrollBar extends StatefulWidget {
   final Function(int) onSelectionChanged;
 
   /// The initially selected item index.
-  final int selectedIndex;
+  ///
+  /// Defaults to 0 if not specified.
+  final int initialSelectedIndex;
 
   /// The height of the indicator bar below the items.
   ///
@@ -60,14 +62,14 @@ class FancyScrollBar extends StatefulWidget {
 
   /// Creates a FancyScrollBar widget.
   ///
-  /// The [itemSpacing], [onSelectionChanged], [selectedIndex], and [items]
-  /// parameters are required.
+  /// The [itemSpacing], [onSelectionChanged], and [items] parameters are required.
+  /// The [initialSelectedIndex] parameter defaults to 0 if not specified.
   const FancyScrollBar({
     super.key,
     required this.itemSpacing,
     required this.onSelectionChanged,
-    required this.selectedIndex,
     required this.items,
+    this.initialSelectedIndex = 0,
     this.viewportHeight,
     this.indicatorHeight,
     this.indicatorColor,
@@ -164,7 +166,7 @@ class _FancyScrollBarState extends State<FancyScrollBar> {
       );
 
       scrollController.addListener(scrollListener);
-      await onItemClick(widget.selectedIndex, isInitialIndex: true);
+      await onItemClick(widget.initialSelectedIndex, isInitialIndex: true);
       await Future.delayed(const Duration(milliseconds: 100));
       resetAnimationTypes();
     });

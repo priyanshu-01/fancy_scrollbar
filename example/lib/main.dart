@@ -84,7 +84,6 @@ class _ScrollExampleState extends State<ScrollExample> {
               selectedIndex = index;
             });
           },
-          selectedIndex: selectedIndex,
           viewportHeight: 80,
           indicatorColor: Theme.of(context)
               .colorScheme
